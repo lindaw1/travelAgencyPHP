@@ -1,9 +1,10 @@
 <?php
 $destinationArray = array(
-    "France">="https://uk.france.fr/en",
-    "Italy">="http://www.italia.it/en/home.html",
-    "Montreal">="https://www.mtl.org/en",
-    "Banff">="https://www.banfflakelouise.com/",
-    "Vancouver">="https://www.tourismvancouver.com/",
-    "Nova Scotia">="https://www.novascotia.com/")
+    "https://uk.france.fr/en" => "France",
+    "http://www.italia.it/en/home.html" => "Italy",
+    "https://www.mtl.org/en" => "Montreal",
+    "https://www.banfflakelouise.com/" => "Banff",
+    "https://www.tourismvancouver.com/" => "Vancouver",
+    "https://www.novascotia.com/" => "Nova Scotia"
+    )
 ?>

@@ -84,7 +84,7 @@ input {
 
 /* Format the greeting */
 #pageGreeting {
-    background-color: brown;
+    background-color: burlywood;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2vw;
     max-width: 90%;

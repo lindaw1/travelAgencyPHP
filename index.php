@@ -1,9 +1,6 @@
 <title>Linda Travel Agency</title>
 
-<?php
-include_once('pageHeader.php');
-
-?>
+<?php include_once('pageHeader.php');?>
 
 
 

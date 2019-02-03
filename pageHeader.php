@@ -12,21 +12,30 @@
 </head>
 
 <div id=pageGreeting> 
+
 <?php
+
 $hour = new DateTime("now", new DateTimeZone('America/Edmonton'));
 $hour = $hour->format('H');
+// $hour = 7;
 
-if( $hour > 6 && $hour <= 11) {
-  echo "Good Morning";
-}
-else if($hour > 11 && $hour <= 16) {
-  echo "Good Afternoon";
-}
-else if($hour > 16 && $hour <= 23) {
-  echo "Good Evening";
-}
-else {
-  echo "Why aren't you asleep?  Are you programming?";
-}
+//for (<initialize>; <condition>; <iteration>)
+//foreach (<set> as <single>)
+// for ($hour=0; $hour <= 23; $hour++) {
+//   echo "<p>";
+  echo "The current time is $hour.";
+  if( $hour > 6 && $hour <= 11) {
+    echo "Good Morning";}
+  else if($hour > 11 && $hour <= 16) {
+    echo "Good Afternoon";
+  } else if($hour > 16 && $hour <= 23) {
+    echo "Good Evening";
+  } else {
+    echo "Why aren't you asleep?  Are you still programming?";
+  }
+  // echo "</p>";
+// }
 ?>
 </div>
+<?php include_once("menu.php"); ?>
+</html>
