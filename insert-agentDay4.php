@@ -1,7 +1,12 @@
+<!-- This script creates a form to send data to the travelexperts database - agents table -->
+
 <!-- checks to see if fields have data before submitting to the server.   -->
 <!-- Sends error message if false. -->
 
 <?php
+
+
+
     $error_msg = 'first';
     if (isset($_POST["submit"])) {
         $agent_data = array();
@@ -59,20 +64,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Insert New Agent</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-<!-- include_once('pageHeader.php') -->
 <body>
+    <header>
+
+        <?php include_once('pageHeader.php');?>
+        <?php include_once("menu.php");?>
+    </header>
+
 <section>
 <?php
 include_once('functions.php');
 
     if ($error_msg == "") {
-        $result = AgentCreate($agent_data);
+        $result = AgentCreate($agent_data); 
         if ($result){
             print("the agent was added to the database.");
 
@@ -105,7 +117,7 @@ EOF;
     <label for="AgtBusPhone">Business Phone:</label><input type="text" name="AgtBusPhone">
     <label for="AgtEmail">Email:</label><input type="text" name="AgtEmail">
     <label for="AgtPosition">Position:</label><input type="text" name="AgtPosition">
-    <label for="AgtAgencyId">Agency ID:</label><input type="number" name="AgtAgencyId">
+    <label for="AgtAgencyId">Agency ID:</label><input type="number" name="AgtAgencyId" min="1" max="2">
     <input type="submit" name="submit" value="submit">
 </form>
 <?php
@@ -113,4 +125,5 @@ EOF;
     ?>
 </section>
 </body>
+<?php include_once("footer.php"); ?>
 </html>

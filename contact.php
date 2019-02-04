@@ -1,11 +1,23 @@
-<title>Contacts</title>
-
-<?php
-include_once('pageHeader.php');
-
-?>
-
 <!-- This is the contact information for the travel agents. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <?php include_once('pageHeader.php');?>
+        <?php include_once("menu.php"); ?>
+    </header>
+
 <h1>Contacts</h1><br>
 <h2>Agents</h2>
 <table>
@@ -38,5 +50,5 @@ include_once('pageHeader.php');
 Calgary, AB T2J 2I9<br>
 Phone: (403) 555-9999<br>
 
-
+<?php include_once("footer.php"); ?>
 </html>

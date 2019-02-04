@@ -23,7 +23,7 @@ $hour = $hour->format('H');
 //foreach (<set> as <single>)
 // for ($hour=0; $hour <= 23; $hour++) {
 //   echo "<p>";
-  echo "The current time is $hour.";
+  // echo "The current time is $hour.";
   if( $hour > 6 && $hour <= 11) {
     echo "Good Morning";}
   else if($hour > 11 && $hour <= 16) {
@@ -37,5 +37,5 @@ $hour = $hour->format('H');
 // }
 ?>
 </div>
-<?php include_once("menu.php"); ?>
+
 </html>

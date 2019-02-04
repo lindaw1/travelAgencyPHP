@@ -1,14 +1,22 @@
-<title>Linda Travel Agency</title>
+<!DOCTYPE html>
+<html>
 
-<?php include_once('pageHeader.php');?>
-
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linda Travel Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
 
 <!-- Front page of Linda's Travel Agency Website -->
 
 <body class="index-page">
     <header>
+        <?php include_once('pageHeader.php');?>
+        <?php include_once("menu.php"); ?>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRongs62pCSNy4Klz9CHp5Z1dJdDJxi9T8pc-3st-mmUf7ZJ5TC"
             class="picture" alt="logo">
     </header>
@@ -31,9 +39,7 @@
 
     </main>
 
-    <footer>
-        Copyright 2019 Linda Wallace &copy;
-    </footer>
+<?php include_once('footer.php');?>
 
 </body>
 

@@ -1,8 +1,23 @@
-<title>Links</title>
+<!-- Links to destination websites -->
+<!DOCTYPE html>
+<html>
 
-<?php     include_once('pageHeader.php');?>
-<body> 
-    <section>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Links</title>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <?php include_once('pageHeader.php');?>
+        <?php include_once("menu.php"); ?>
+    </header>
+
+<section>
 <?php
     include_once('variables.php');
 
@@ -16,6 +31,7 @@
     print("</table>");
 ?>
 
-  </section>
+</section>
 </body>
+<?php include_once("footer.php"); ?>
 </html>

@@ -1,10 +1,22 @@
-<title>Registration Form</title>
+<!-- Registration Form -->
+<!DOCTYPE html>
+<html>
 
-<?php
-include_once('pageHeader.php');
-?>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
+    <header>
+        <?php include_once('pageHeader.php');?>
+        <?php include_once("menu.php"); ?>
+    </header>
+
 <!-- Form for Booking request for more information from travel agent. -->
     <h1>Booking Registration Form</h1>
 
@@ -82,5 +94,6 @@ include_once('pageHeader.php');
 </body>
 
 <script src="script.js"></script>
+<?php include_once("footer.php"); ?>
 
 </html>
