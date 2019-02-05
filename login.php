@@ -1,12 +1,30 @@
+<?php 
+    session_start();
 
+    if (!isset($_SESSION["start_time"])) {
+        $_SESSION["start_time"] = time();
+    }
 
-<?php
+    include_once("functions.php");
 
-// Upload the userNameUpload.txt file to ensure all new users are in the system
-
-$userName_data = file_get_contents("userNameUpload.txt");
+    if (isset($_POST["submit"])) {
+        $user_list = GetUsers();
+        if (isset($user_list[$_POST["AgtUserName"]])) {
+            if ($user_list[$_POST["AgtUserName"]] === $_POST["AgtPassword"]){
+                print("You are logged in!");
+                $_SESSION["logged_in"] = true;
+                header("Location: http://localhost/travelAgencyPHP/insert-agentDay4.php");
+            } else {
+                print("Unfortunately this is not the correct username or password.");
+            }
+        } else {
+            print("Unfortunately this is not the correct username or password. Try again.");
+        }
+    }
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html>

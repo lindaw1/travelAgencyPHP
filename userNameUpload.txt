@@ -1,5 +1,5 @@
-elliot epassword\n
-sam spassword\n
-bill bpassword\n
-sally spassword\n
-doreen dpassword\n
+elliot, epassword
+sam, spassword
+bill, bpassword
+sally, spassword
+doreen, dpassword

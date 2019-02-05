@@ -49,4 +49,26 @@ from the professor.  See "functionsImplode.php for my work." -->
         return $result;
     }
 
+    function GetUsers() {
+        $user_array = file("userNameUpload.txt");
+        $assocArray = array();
+        foreach ($user_array as $lineEntry) {
+            $data = explode(",", $lineEntry);
+            $assocArray[trim($data[0])] = trim($data[1]);
+
+        }
+        return $assocArray;
+
+    }
+
 ?>
+<!-- tobe deleted -->
+<!-- function GetUsers(){ ----professor
+        $user_array = file("users.txt");
+        $users = array();
+        foreach ($user_array as $row) {
+            $items = explode(",", $row);
+            $users[trim($items[0])] = trim($items[1]);
+        }
+        return $users; -->
+    
