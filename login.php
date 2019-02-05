@@ -1,3 +1,13 @@
+
+
+<?php
+
+// Upload the userNameUpload.txt file to ensure all new users are in the system
+
+$userName_data = file_get_contents("userNameUpload.txt");
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +27,14 @@
         <?php include_once("menu.php"); ?>
 
     </header>
+<section>
+<form method="post" action="#">
+    <label for="AgtUserName">User Name:</label><input type="text" name="AgtUserName">
+    <label for="AgtPassword">Password:</label><input type="text" name="AgtPassword">
+    <input type="submit" name="submit" value="Login">
+</form>
 
+</section>
    
 
 <?php include_once('footer.php');?>
