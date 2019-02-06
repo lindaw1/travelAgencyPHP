@@ -1,0 +1,25 @@
+<label for="AgtAgencyId">Agency ID:</label>        
+<select name="AgtAgencyId">
+        <?php        
+        switch ($agent_data["AgtAgencyId"]) {
+            case "":
+                echo "<option value="">---please choose---</option>";
+                break;
+            case "1":
+                echo "<option value="1">Winnipeg (Agency 1)</option>";
+                break;
+            case "2":
+                echo "<option value="2">Calgary (Agency 2)</option>";
+                break;
+            default:
+                echo "Linda --- You have a problem. ha ha";
+        }
+        ?>
+
+</select> 
+
+
+<option value="">---please choose---</option>
+<option value="1">Winnipeg (Agency 1)</option>
+<option value="2">Calgary (Agency 2)</option>
+// <value='{$agent_data["AgtAgencyId"]}'>

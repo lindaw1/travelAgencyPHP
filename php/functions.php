@@ -40,7 +40,7 @@ from the professor.  See "functionsImplode.php for my work." -->
             $agent_data["AgtBusPhone"],
             $agent_data["AgtEmail"],
             $agent_data["AgtPosition"],
-            $agent_data["AgencyId"]);
+            $agent_data["AgtAgencyId"]);
         $result = mysqli_stmt_execute($stmt);
 
         mysqli_stmt_close($stmt);
@@ -50,25 +50,14 @@ from the professor.  See "functionsImplode.php for my work." -->
     }
 
     function GetUsers() {
-        $user_array = file("userNameUpload.txt");
+        $user_array = file("php/userNameUpload.txt");
         $assocArray = array();
         foreach ($user_array as $lineEntry) {
             $data = explode(",", $lineEntry);
             $assocArray[trim($data[0])] = trim($data[1]);
-
         }
         return $assocArray;
-
     }
-
 ?>
-<!-- tobe deleted -->
-<!-- function GetUsers(){ ----professor
-        $user_array = file("users.txt");
-        $users = array();
-        foreach ($user_array as $row) {
-            $items = explode(",", $row);
-            $users[trim($items[0])] = trim($items[1]);
-        }
-        return $users; -->
+
     

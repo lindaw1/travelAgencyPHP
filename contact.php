@@ -1,4 +1,11 @@
 <!-- This is the contact information for the travel agents. -->
+<?php
+session_start();
+
+if (!isset($_SESSION["start_time"])) {
+    $_SESSION["start_time"] = time();
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,8 +21,8 @@
 
 <body>
     <header>
-        <?php include_once('pageHeader.php');?>
-        <?php include_once("menu.php"); ?>
+        <?php include_once('php/pageHeader.php');?>
+        <?php include_once("php/menu.php"); ?>
     </header>
 
 <h1>Contacts</h1><br>
@@ -50,5 +57,5 @@
 Calgary, AB T2J 2I9<br>
 Phone: (403) 555-9999<br>
 
-<?php include_once("footer.php"); ?>
+<?php include_once("php/footer.php"); ?>
 </html>

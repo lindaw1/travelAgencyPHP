@@ -1,4 +1,11 @@
 <!-- Registration Form -->
+<?php
+session_start();
+
+if (!isset($_SESSION["start_time"])) {
+    $_SESSION["start_time"] = time();
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +20,8 @@
 
 <body>
     <header>
-        <?php include_once('pageHeader.php');?>
-        <?php include_once("menu.php"); ?>
+        <?php include_once('php/pageHeader.php');?>
+        <?php include_once("php/menu.php"); ?>
     </header>
 
 <!-- Form for Booking request for more information from travel agent. -->
@@ -94,6 +101,6 @@
 </body>
 
 <script src="script.js"></script>
-<?php include_once("footer.php"); ?>
+<?php include_once("php/footer.php"); ?>
 
 </html>

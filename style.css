@@ -59,6 +59,7 @@ body {
 /* Formats the top picture on the index page. */
 header .picture {
     border: 5px solid crimson;
+    margin-top: 25px;
 }
 /* Lines up the items on forms. */
 label {
@@ -98,10 +99,12 @@ nav {
     font-size: 1.5vw;
     max-width: 90%;
     padding: 5px;
+   
 
 }
-/* 
-nav + a {
-    padding: 50 px;
-    margin: 50 px;
-} */
+
+nav a {
+    padding-right: 25px;
+    padding-left: 25px;
+    border: 2px solid blueviolet;
+}

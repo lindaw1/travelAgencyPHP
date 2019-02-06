@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["start_time"])) {
+    $_SESSION["start_time"] = time();
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,8 +22,8 @@
 
 <body class="index-page">
     <header>
-        <?php include_once('pageHeader.php');?>
-        <?php include_once("menu.php"); ?>
+        <?php include_once('php/pageHeader.php');?>
+        <?php include_once("php/menu.php"); ?>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRongs62pCSNy4Klz9CHp5Z1dJdDJxi9T8pc-3st-mmUf7ZJ5TC"
             class="picture" alt="logo">
     </header>
@@ -39,7 +46,7 @@
 
     </main>
 
-<?php include_once('footer.php');?>
+<?php include_once('php/footer.php');?>
 
 </body>
 

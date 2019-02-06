@@ -17,6 +17,7 @@
 
 $hour = new DateTime("now", new DateTimeZone('America/Edmonton'));
 $hour = $hour->format('H');
+
 // $hour = 7;
 
 //for (<initialize>; <condition>; <iteration>)
@@ -25,11 +26,11 @@ $hour = $hour->format('H');
 //   echo "<p>";
   // echo "The current time is $hour.";
   if( $hour > 6 && $hour <= 11) {
-    echo "Good Morning";}
+    echo "Good Morning Sunshine";}
   else if($hour > 11 && $hour <= 16) {
-    echo "Good Afternoon";
+    echo "Good Afternoon - You're beautiful!";
   } else if($hour > 16 && $hour <= 23) {
-    echo "Good Evening";
+    echo "Good Evening Beautiful";
   } else {
     echo "Why aren't you asleep?  Are you still programming?";
   }

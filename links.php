@@ -1,4 +1,12 @@
 <!-- Links to destination websites -->
+
+<?php
+session_start();
+
+if (!isset($_SESSION["start_time"])) {
+    $_SESSION["start_time"] = time();
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,13 +21,13 @@
 
 <body>
     <header>
-        <?php include_once('pageHeader.php');?>
-        <?php include_once("menu.php"); ?>
+        <?php include_once('php/pageHeader.php');?>
+        <?php include_once("php/menu.php"); ?>
     </header>
 
 <section>
 <?php
-    include_once('variables.php');
+    include_once('php/variables.php');
 
     print("<table align='left border='1' cellpadding='3' cellspacing='0'>");
     $row = 1;
@@ -33,5 +41,5 @@
 
 </section>
 </body>
-<?php include_once("footer.php"); ?>
+<?php include_once("php/footer.php"); ?>
 </html>

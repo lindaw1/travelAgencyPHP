@@ -5,7 +5,7 @@
         $_SESSION["start_time"] = time();
     }
 
-    include_once("functions.php");
+    include_once("php/functions.php");
 
     if (isset($_POST["submit"])) {
         $user_list = GetUsers();
@@ -41,8 +41,8 @@
 
 <body>
     <header>
-        <?php include_once('pageHeader.php');?>
-        <?php include_once("menu.php"); ?>
+        <?php include_once('php/pageHeader.php');?>
+        <?php include_once("php/menu.php"); ?>
 
     </header>
 <section>
@@ -55,7 +55,7 @@
 </section>
    
 
-<?php include_once('footer.php');?>
+<?php include_once('php/footer.php');?>
 
 </body>
 
